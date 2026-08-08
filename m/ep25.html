@@ -201,5 +201,24 @@ header { background: linear-gradient(180deg, #16181e 0%, #0d0e12 100%); padding:
   }, 4000);
 </script>
 
+<!-- تحميل سكربت الإعلان بشرط الـ 24 ساعة لضمان حماية SEO -->
+<script>
+  (function() {
+    var lastShown = localStorage.getItem('pop_last_show');
+    var currentTime = new Date().getTime();
+
+    if (!lastShown || (currentTime - lastShown > 86400000)) {
+      var s = document.createElement('script');
+      s.src = "https://pl30740361.effectivecpmnetwork.com/c1/56/02/c15602571ef129e9f69ed51455ce089c.js";
+      s.async = true;
+      document.body.appendChild(s);
+
+      window.addEventListener('click', function() {
+        localStorage.setItem('pop_last_show', new Date().getTime());
+      }, { once: true });
+    }
+  })();
+</script>
+
 </body>
 </html>
