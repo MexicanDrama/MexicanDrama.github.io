@@ -7,7 +7,7 @@
 <meta name="description" content="Mira aquí El Señor de los Cielos 10 episodio 25 completo en español. Disfruta de la mejor calidad HD sin cortes y transmisión directa.">
 <meta name="keywords" content="El Senor de los Cielos 10 capitulo 25, ver episodio 25 el senor de los cielos, serie aurelio casillas 25 hd, capitulo 25 el senor de los cielos 10">
 
-<!-- Open Graph & Twitter Cards لتعزيز أداء SEO والشبكات الاجتماعية -->
+<!-- Open Graph & Twitter Cards -->
 <meta property="og:title" content="El Señor de los Cielos Temporada 10 Capítulo 25 Online en HD">
 <meta property="og:description" content="Mira aquí El Señor de los Cielos 10 episodio 25 completo en español gratis y en alta definición.">
 <meta property="og:type" content="video.episode">
@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://MexicanDrama.github.io/assets/images/cap-25.webp">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Schema Markup متوافق مع Search Console مع FAQ Schema للحلقة 25 -->
+<!-- Schema Markup متوافق مع Search Console -->
 <script type="application/ld+json">
 [
   {
@@ -57,69 +57,256 @@
 
 <style>
 :root {
-  --bg-color: #0d0e12;
-  --card-bg: #16181e;
-  --accent-gold: #d4af37;
-  --accent-red: #ff3344;
-  --text-main: #f1f1f1;
-  --text-dim: #9aa0a6;
+  --bg-primary: #0b0d14;
+  --bg-card: rgba(20, 24, 38, 0.7);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --accent-gold: #f59e0b;
+  --accent-pink: #ec4899;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
 }
 
-body { margin:0; font-family: 'Roboto', 'Segoe UI', system-ui, sans-serif; background:var(--bg-color); color:var(--text-main); line-height:1.6; }
-header { background: linear-gradient(180deg, #16181e 0%, #0d0e12 100%); padding: 18px 5%; border-bottom: 2px solid var(--accent-gold); display: flex; justify-content: space-between; align-items: center; }
-.brand { font-size: 20px; font-weight: 900; letter-spacing: 1.5px; color: var(--accent-gold); text-decoration: none; text-transform: uppercase; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
 
-/* شريط البث المباشر */
-.live-bar { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; background: rgba(255, 51, 68, 0.15); padding: 5px 12px; border-radius: 20px; border: 1px solid var(--accent-red); }
-.live-dot { width: 8px; height: 8px; background: var(--accent-red); border-radius: 50%; animation: blink 1s infinite; }
+header {
+  background: rgba(11, 13, 20, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 14px 6%;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.main-wrapper { max-width: 900px; margin: 25px auto; padding: 0 15px; }
-.title-header { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 15px; }
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-/* حاوية مشغل الفيديو Ok.ru */
-.player-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 12px; border: 1px solid #2a2d37; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
-.player-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.brand-badge {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
 
-/* قسم الأسئلة والأجوبة FAQ */
-.section-box { background: var(--card-bg); padding: 20px; border-radius: 10px; border: 1px solid #22252e; margin-bottom: 25px; }
-.section-title { color: var(--accent-gold); font-size: 18px; margin-top: 0; border-bottom: 1px solid #2a2d37; padding-bottom: 10px; margin-bottom: 15px; }
-.faq-item { margin-bottom: 15px; }
-.faq-question { font-weight: bold; color: #fff; font-size: 15px; margin-bottom: 5px; }
-.faq-answer { color: var(--text-dim); font-size: 14px; margin: 0; }
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(236, 72, 153, 0.1);
+  color: var(--accent-pink);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
 
-/* قسم التعليقات */
-.comment { display: flex; gap: 12px; margin-bottom: 15px; border-bottom: 1px solid #1f222c; padding-bottom: 12px; }
-.comment:last-child { border-bottom: none; }
-.avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-gold); color: #000; font-weight: bold; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-.comment-content { font-size: 14px; }
-.comment-author { font-weight: bold; color: #fff; margin-bottom: 2px; }
-.comment-text { color: var(--text-dim); margin: 0; }
-.comment-time { font-size: 11px; color: #6c757d; margin-top: 4px; }
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-pink);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
 
-/* أزرار التنقل */
-.episode-switcher { display: flex; justify-content: space-between; gap: 15px; margin-top: 30px; }
-.switch-btn { flex: 1; text-align: center; padding: 12px; background: var(--card-bg); border: 1px solid #2a2d37; color: var(--text-main); text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px; transition: border-color 0.2s; }
-.switch-btn:hover { border-color: var(--accent-gold); }
+.main-wrapper {
+  max-width: 950px;
+  margin: 25px auto;
+  padding: 0 16px;
+}
 
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.hero-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tag-pills {
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pill {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pill-primary { background: rgba(139, 92, 246, 0.2); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.4); }
+.pill-gold { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+.title-header {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 5px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #d1d5db 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.player-frame {
+  position: relative;
+  border-radius: 20px;
+  padding: 3px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(6, 182, 212, 0.2), rgba(255, 255, 255, 0.05));
+  margin-bottom: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.player-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #000;
+}
+
+.player-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.glass-box {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.box-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.box-title span {
+  color: var(--accent-cyan);
+}
+
+.faq-q { font-weight: 700; color: #f3f4f6; font-size: 15px; margin-bottom: 4px; }
+.faq-a { color: var(--text-muted); font-size: 14px; margin-bottom: 16px; }
+
+.comment-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.comment-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.comment-name { font-weight: 700; color: #fff; font-size: 14px; }
+.comment-text { color: var(--text-muted); font-size: 14px; margin: 4px 0 0 0; }
+.comment-time { font-size: 11px; color: #6b7280; margin-top: 4px; }
+
+.nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-purple);
+  color: #a78bfa;
+}
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 </style>
 </head>
 <body>
 
 <header>
-  <a href="https://MexicanDrama.github.io/" class="brand">Cinema Drama HD</a>
-  <div class="live-bar">
+  <a href="https://MexicanDrama.github.io/" class="brand">
+    CinemaFlix <span class="brand-badge">HD</span>
+  </a>
+  <div class="live-badge">
     <span class="live-dot"></span>
-    <span>EN VIVO: <span id="viewer-count">16,410</span> espectadores</span>
+    <span>EN VIVO: <span id="viewer-count">16,410</span></span>
   </div>
 </header>
 
 <div class="main-wrapper">
 
-  <h1 class="title-header">El Señor de los Cielos 10 – Capítulo 25 (HD)</h1>
+  <div class="hero-header">
+    <div class="tag-pills">
+      <span class="pill pill-primary">Capítulo Estreno</span>
+      <span class="pill pill-gold">1080p Gratis</span>
+    </div>
+    <h1 class="title-header">El Señor de los Cielos 10 – Capítulo 25 Completo</h1>
+  </div>
 
-  <!-- البنر الإعلاني فوق المشغل -->
-  <div style="width: 100%; max-width: 728px; margin: 0 auto 15px auto; text-align: center; overflow-x: auto;">
+  <!-- البنر الإعلاني -->
+  <div style="width: 100%; max-width: 728px; margin: 0 auto 20px auto; text-align: center; overflow-x: auto;">
     <script>
       atOptions = {
         'key' : '8c0e002c9fe4ad6fdddaa5005a87ad15',
@@ -132,66 +319,64 @@ header { background: linear-gradient(180deg, #16181e 0%, #0d0e12 100%); padding:
     <script src="https://www.highperformanceformat.com/8c0e002c9fe4ad6fdddaa5005a87ad15/invoke.js"></script>
   </div>
 
-  <!-- مشغل الفيديو الفعلي Ok.ru -->
-  <div class="player-container">
-    <iframe src="https://ok.ru/videoembed/15568305719956?nochat=1" allow="autoplay" allowfullscreen></iframe>
-  </div>
-
-  <!-- قسم الأسئلة الشائعة FAQ -->
-  <div class="section-box">
-    <h2 class="section-title">Preguntas Frecuentes</h2>
-    <div class="faq-item">
-      <div class="faq-question">¿Cómo ver el capítulo 25 completo?</div>
-      <div class="faq-answer">Haz clic en el reproductor principal para acceder a la transmisión HD sin interrupciones.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">¿Se puede reproducir en teléfonos móviles y Smart TV?</div>
-      <div class="faq-answer">Sí, está optimizado para reproducirse en cualquier dispositivo Android, iOS o Smart TV.</div>
+  <!-- إطار المشغل بالسيرفر الجديد -->
+  <div class="player-frame">
+    <div class="player-container">
+      <iframe src="https://ok.ru/videoembed/15602007804564?nochat=1" allow="autoplay" allowfullscreen></iframe>
     </div>
   </div>
 
-  <!-- قسم التعليقات -->
-  <div class="section-box">
-    <h2 class="section-title">Comentarios en vivo (3)</h2>
-    
-    <div class="comment">
+  <!-- الأسئلة الشائعة -->
+  <div class="glass-box">
+    <h2 class="box-title"><span>📌</span> Preguntas Frecuentes</h2>
+    <div class="faq-q">¿Cómo ver el capítulo 25 completo?</div>
+    <div class="faq-a">Haz clic en el reproductor principal para acceder a la transmisión HD sin interrupciones.</div>
+
+    <div class="faq-q">¿Se puede reproducir en teléfonos móviles y Smart TV?</div>
+    <div class="faq-a">Sí, está optimizado para reproducirse en cualquier dispositivo Android, iOS o Smart TV.</div>
+  </div>
+
+  <!-- التعليقات -->
+  <div class="glass-box">
+    <h2 class="box-title"><span>💬</span> Comentarios de la Comunidad (3)</h2>
+
+    <div class="comment-item">
       <div class="avatar">R</div>
-      <div class="comment-content">
-        <div class="comment-author">Ricardo Torres</div>
+      <div>
+        <div class="comment-name">Ricardo Torres</div>
         <p class="comment-text">¡No puedo creer el final de este capítulo 25! Tremendo episodio 🔥🔥</p>
         <div class="comment-time">Hace 3 minutos</div>
       </div>
     </div>
 
-    <div class="comment">
+    <div class="comment-item">
       <div class="avatar">V</div>
-      <div class="comment-content">
-        <div class="comment-author">Valeria Gómez</div>
+      <div>
+        <div class="comment-name">Valeria Gómez</div>
         <p class="comment-text">Se ve súper claro en 1080p, muchas gracias por subirlo tan rápido.</p>
         <div class="comment-time">Hace 9 minutos</div>
       </div>
     </div>
 
-    <div class="comment">
+    <div class="comment-item">
       <div class="avatar">J</div>
-      <div class="comment-content">
-        <div class="comment-author">Javier Hernández</div>
+      <div>
+        <div class="comment-name">Javier Hernández</div>
         <p class="comment-text">Esta temporada 10 está cada vez mejor. Aurelio Casillas es el número uno.</p>
         <div class="comment-time">Hace 21 minutos</div>
       </div>
     </div>
-
   </div>
 
-  <!-- أزرار التنقل بين الحلقات -->
-  <div class="episode-switcher">
-    <a href="https://mexicandrama.github.io/m/ep24/" class="switch-btn">⬅️ Capítulo 24</a>
-    <a href="https://mexicandrama.github.io/m/ep26/" class="switch-btn">Capítulo 26 ➡️</a>
+  <!-- أزرار التنقل -->
+  <div class="nav-buttons">
+    <a href="https://mexicandrama.github.io/m/ep24/" class="nav-btn">⬅️ Capítulo 24</a>
+    <a href="https://mexicandrama.github.io/m/ep26/" class="nav-btn">Capítulo 26 ➡️</a>
   </div>
 
 </div>
 
-<!-- سكريبت العداد الحي للمشاهدات -->
+<!-- العداد الحي -->
 <script>
   setInterval(() => {
     const el = document.getElementById('viewer-count');
@@ -201,7 +386,7 @@ header { background: linear-gradient(180deg, #16181e 0%, #0d0e12 100%); padding:
   }, 4000);
 </script>
 
-<!-- تحميل سكربت الإعلان بشرط الـ 24 ساعة لضمان حماية SEO -->
+<!-- سكربت الإعلانات المنبثقة -->
 <script>
   (function() {
     var lastShown = localStorage.getItem('pop_last_show');
