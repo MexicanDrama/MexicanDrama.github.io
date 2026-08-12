@@ -57,256 +57,303 @@
 
 <style>
 :root {
-  --bg-primary: #0b0d14;
-  --bg-card: rgba(20, 24, 38, 0.7);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --accent-purple: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-gold: #f59e0b;
-  --accent-pink: #ec4899;
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
+  --bg-main: #07090e;
+  --bg-card: #0f131d;
+  --bg-card-hover: #161c2b;
+  --accent-red: #e50914;
+  --accent-gold: #ffb703;
+  --accent-glow: rgba(229, 9, 20, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border-subtle: rgba(255, 255, 255, 0.07);
 }
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: var(--bg-primary);
-  background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
-  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
+/* Header سينمائي حديث */
 header {
-  background: rgba(11, 13, 20, 0.85);
-  backdrop-filter: blur(12px);
-  padding: 14px 6%;
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(7, 9, 14, 0.9);
+  backdrop-filter: blur(15px);
+  padding: 16px 5%;
+  border-bottom: 1px solid var(--border-subtle);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .brand {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 900;
-  letter-spacing: 0.5px;
   color: #fff;
   text-decoration: none;
+  letter-spacing: -0.5px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.brand-badge {
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-  color: #fff;
-  font-size: 11px;
-  padding: 2px 8px;
-  border-radius: 6px;
+.brand span {
+  color: var(--accent-red);
+}
+
+.badge-vip {
+  background: linear-gradient(45deg, var(--accent-red), #ff4757);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.live-badge {
+.live-indicator {
   display: flex;
   align-items: center;
   gap: 8px;
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  padding: 6px 16px;
+  border-radius: 30px;
   font-size: 13px;
   font-weight: 700;
-  background: rgba(236, 72, 153, 0.1);
-  color: var(--accent-pink);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(236, 72, 153, 0.3);
+  color: #ff4757;
 }
 
 .live-dot {
   width: 8px;
   height: 8px;
-  background: var(--accent-pink);
+  background-color: var(--accent-red);
   border-radius: 50%;
-  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 10px var(--accent-red);
+  animation: pulse 1.4s infinite;
 }
 
-.main-wrapper {
-  max-width: 950px;
-  margin: 25px auto;
-  padding: 0 16px;
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 18px;
 }
 
-.hero-header {
+/* العنوان الشريطي */
+.media-header {
   text-align: center;
   margin-bottom: 25px;
 }
 
-.tag-pills {
+.episode-tag {
   display: inline-flex;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.pill {
-  font-size: 11px;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 183, 3, 0.1);
+  color: var(--accent-gold);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  font-size: 12px;
   font-weight: 800;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-bottom: 12px;
 }
 
-.pill-primary { background: rgba(139, 92, 246, 0.2); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.4); }
-.pill-gold { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
-
-.title-header {
-  font-size: 28px;
+.media-title {
+  font-size: 30px;
   font-weight: 900;
-  margin: 5px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #d1d5db 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
-.player-frame {
+/* إطار مشغل الفيديو المميز */
+.player-wrapper {
   position: relative;
-  border-radius: 20px;
-  padding: 3px;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(6, 182, 212, 0.2), rgba(255, 255, 255, 0.05));
-  margin-bottom: 30px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 8px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 30px var(--accent-glow);
+  margin-bottom: 35px;
 }
 
-.player-container {
+.player-box {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  border-radius: 17px;
+  border-radius: 18px;
   background: #000;
 }
 
-.player-container iframe {
+.player-box iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: none;
 }
 
-.glass-box {
+/* البنرات الإعلانية */
+.ad-slot {
+  width: 100%;
+  max-width: 728px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  overflow-x: auto;
+}
+
+/* البطاقات التفاعلية (الأسئلة والتعليقات) */
+.card {
   background: var(--bg-card);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 28px;
   margin-bottom: 25px;
 }
 
-.box-title {
+.card-header {
+  font-size: 19px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 18px;
-  font-weight: 800;
   color: #fff;
-  margin-top: 0;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 12px;
 }
 
-.box-title span {
-  color: var(--accent-cyan);
+.faq-item {
+  margin-bottom: 16px;
 }
 
-.faq-q { font-weight: 700; color: #f3f4f6; font-size: 15px; margin-bottom: 4px; }
-.faq-a { color: var(--text-muted); font-size: 14px; margin-bottom: 16px; }
+.faq-item:last-child { margin-bottom: 0; }
 
-.comment-item {
+.faq-title {
+  font-weight: 700;
+  color: #f3f4f6;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.faq-desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* التعليقات الحديثة */
+.comment-card {
   display: flex;
-  gap: 15px;
-  margin-bottom: 18px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.comment-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.comment-card:last-child { border-bottom: none; }
 
-.avatar {
-  width: 44px;
-  height: 44px;
+.avatar-circle {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(135deg, var(--accent-red), #8b5cf6);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
+  font-weight: 800;
   color: #fff;
   flex-shrink: 0;
 }
 
-.comment-name { font-weight: 700; color: #fff; font-size: 14px; }
-.comment-text { color: var(--text-muted); font-size: 14px; margin: 4px 0 0 0; }
-.comment-time { font-size: 11px; color: #6b7280; margin-top: 4px; }
+.comment-body h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
 
-.nav-buttons {
+.comment-body p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.comment-date {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* أزرار التنقل بين الحلقات */
+.navigation-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 16px;
   margin-top: 30px;
 }
 
-.nav-btn {
+.nav-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 16px;
   background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-subtle);
   color: #fff;
   text-decoration: none;
-  border-radius: 12px;
-  font-weight: 700;
+  border-radius: 14px;
+  font-weight: 800;
   font-size: 14px;
   transition: all 0.3s ease;
 }
 
-.nav-btn:hover {
-  background: rgba(139, 92, 246, 0.15);
-  border-color: var(--accent-purple);
-  color: #a78bfa;
+.nav-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  transform: translateY(-2px);
 }
 
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.9); }
+}
 </style>
 </head>
 <body>
 
 <header>
   <a href="https://MexicanDrama.github.io/" class="brand">
-    CinemaFlix <span class="brand-badge">HD</span>
+    Cinema<span>Flix</span> <span class="badge-vip">PRO</span>
   </a>
-  <div class="live-badge">
+  <div class="live-indicator">
     <span class="live-dot"></span>
     <span>EN VIVO: <span id="viewer-count">19,480</span></span>
   </div>
 </header>
 
-<div class="main-wrapper">
+<div class="container">
 
-  <div class="hero-header">
-    <div class="tag-pills">
-      <span class="pill pill-primary">Capítulo Estreno</span>
-      <span class="pill pill-gold">1080p Gratis</span>
-    </div>
-    <h1 class="title-header">El Señor de los Cielos 10 – Capítulo 27 Completo</h1>
+  <div class="media-header">
+    <div class="episode-tag">🔥 Estreno Exclusivo Full HD</div>
+    <h1 class="media-title">El Señor de los Cielos 10 – Capítulo 27</h1>
   </div>
 
-  <!-- البنر الإعلاني -->
-  <div style="width: 100%; max-width: 728px; margin: 0 auto 20px auto; text-align: center; overflow-x: auto;">
+  <!-- البنر الإعلاني علوي -->
+  <div class="ad-slot">
     <script>
       atOptions = {
         'key' : '8c0e002c9fe4ad6fdddaa5005a87ad15',
@@ -319,64 +366,67 @@ header {
     <script src="https://www.highperformanceformat.com/8c0e002c9fe4ad6fdddaa5005a87ad15/invoke.js"></script>
   </div>
 
-  <!-- إطار المشغل الخاص بالحلقة 27 المحدث -->
-  <div class="player-frame">
-    <div class="player-container">
+  <!-- إطار المشغل المحدث برابط الفيديو الجديد -->
+  <div class="player-wrapper">
+    <div class="player-box">
       <iframe src="https://ok.ru/videoembed/15611939850900?nochat=1" allow="autoplay" allowfullscreen></iframe>
     </div>
   </div>
 
   <!-- الأسئلة الشائعة -->
-  <div class="glass-box">
-    <h2 class="box-title"><span>📌</span> Preguntas Frecuentes</h2>
-    <div class="faq-q">¿Cómo ver el capítulo 27 completo?</div>
-    <div class="faq-a">Haz clic en el reproductor principal para acceder a la transmisión HD sin interrupciones.</div>
-
-    <div class="faq-q">¿Se puede reproducir en teléfonos móviles y Smart TV?</div>
-    <div class="faq-a">Sí, está optimizado para reproducirse en cualquier dispositivo Android, iOS o Smart TV.</div>
+  <div class="card">
+    <h2 class="card-header">📌 Información y Ayuda</h2>
+    <div class="faq-item">
+      <div class="faq-title">¿Cómo ver el capítulo 27 en calidad Full HD?</div>
+      <div class="faq-desc">Presiona el botón de reproducción dentro del reproductor principal para iniciar la transmisión en alta definición sin cortes.</div>
+    </div>
+    <div class="faq-item" style="margin-top: 15px;">
+      <div class="faq-title">¿Es compatible con mi Smart TV o celular?</div>
+      <div class="faq-desc">Sí, la plataforma está completamente optimizada para cualquier navegador en móviles iOS, Android y Smart TV.</div>
+    </div>
   </div>
 
   <!-- التعليقات -->
-  <div class="glass-box">
-    <h2 class="box-title"><span>💬</span> Comentarios de la Comunidad (3)</h2>
+  <div class="card">
+    <h2 class="card-header">💬 Opiniones de los Espectadores (3)</h2>
 
-    <div class="comment-item">
-      <div class="avatar">E</div>
-      <div>
-        <div class="comment-name">Esteban Ríos</div>
-        <p class="comment-text">¡Qué gran episodio el 27! La trama se está poniendo increíble 🔥</p>
-        <div class="comment-time">Hace 2 minutos</div>
+    <div class="comment-card">
+      <div class="avatar-circle">E</div>
+      <div class="comment-body">
+        <h4>Esteban Ríos</h4>
+        <p>¡Qué gran episodio el 27! La trama se está poniendo increíble 🔥</p>
+        <div class="comment-date">Hace 2 minutos</div>
       </div>
     </div>
 
-    <div class="comment-item">
-      <div class="avatar">C</div>
-      <div>
-        <div class="comment-name">Camila Silva</div>
-        <p class="comment-text">La calidad 1080p es excelente, gracias por subirlo tan rápido siempre.</p>
-        <div class="comment-time">Hace 11 minutos</div>
+    <div class="comment-card">
+      <div class="avatar-circle">C</div>
+      <div class="comment-body">
+        <h4>Camila Silva</h4>
+        <p>La calidad 1080p es excelente, gracias por subirlo tan rápido siempre.</p>
+        <div class="comment-date">Hace 11 minutos</div>
       </div>
     </div>
 
-    <div class="comment-item">
-      <div class="avatar">L</div>
-      <div>
-        <div class="comment-name">Luis Fernando</div>
-        <p class="comment-text">Aurelio Casillas no defrauda, esperando con ansias el capítulo 28.</p>
-        <div class="comment-time">Hace 18 minutos</div>
+    <div class="comment-card">
+      <div class="avatar-circle">L</div>
+      <div class="comment-body">
+        <h4>Luis Fernando</h4>
+        <p>Aurelio Casillas no defrauda, esperando con ansias el capítulo 28.</p>
+        <div class="comment-date">Hace 18 minutos</div>
       </div>
     </div>
   </div>
 
-  <!-- أزرار التنقل -->
-  <div class="nav-buttons">
-    <a href="https://mexicandrama.github.io/m/ep26/" class="nav-btn">⬅️ Capítulo 26</a>
-    <a href="https://mexicandrama.github.io/m/ep28/" class="nav-btn">Capítulo 28 ➡️</a>
+  <!-- أزرار الانتقال بين الحلقات -->
+  <div class="navigation-grid">
+    <a href="https://mexicandrama.github.io/m/ep26/" class="nav-card">⬅️ Capítulo Anterior (26)</a>
+    <a href="https://mexicandrama.github.io/m/ep28/" class="nav-card">Siguiente Capítulo (28) ➡️</a>
   </div>
 
 </div>
 
-<!-- العداد الحي -->
+<!-- عداد المشاهدات الحي -->
 <script>
   setInterval(() => {
     const el = document.getElementById('viewer-count');
